@@ -1,5 +1,7 @@
 Fibonacci series
+
 Check a number is Prime or not
+
 Swap two numbers in Java
 Swap two numbers in Java without additional variables
 Reverse a String without any api method
