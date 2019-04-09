@@ -9,7 +9,6 @@ public class CheckArmstrong {
         while(number!=0)
         {
             rem=number%10;
-            //sum=sum+Math.pow((double)rem,(double) noOfDigits);
             sum=sum+Math.pow(rem,3);
             number=number/10;
         }
