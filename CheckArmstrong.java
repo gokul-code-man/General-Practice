@@ -2,26 +2,15 @@ package com.practice;
 
 public class CheckArmstrong {
     long number;
-    public int checkNumberOfDigits(int number)
+    public boolean isArmstrong(int number)
     {
-        int count=0;
-        while(number!=0)
-        {
-            count++;
-            number=number/10;
-        }
-        System.out.println("Count is "+count);
-        return count;
-    }
-
-    public boolean isArmstrong(int noOfDigits,int number)
-    {
-        int rem=0,temp=number;
+        int rem=0;int temp=number;
         double sum=0;
         while(number!=0)
         {
             rem=number%10;
-            sum=sum+Math.pow((double)rem,(double) noOfDigits);
+            //sum=sum+Math.pow((double)rem,(double) noOfDigits);
+            sum=sum+Math.pow(rem,3);
             number=number/10;
         }
         System.out.println("Final sum is "+(int)sum);
@@ -37,8 +26,7 @@ public class CheckArmstrong {
 
     public static void main(String[] args) {
         CheckArmstrong obj=new CheckArmstrong();
-        int noOfDigits=obj.checkNumberOfDigits(371);
-        boolean result=obj.isArmstrong(noOfDigits,381);
+        boolean result=obj.isArmstrong(371);
         if(result)
         {
             System.out.println("Its an armstrong number");
